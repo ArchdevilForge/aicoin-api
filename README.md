@@ -11,7 +11,7 @@ pip install git+https://github.com/ArchdevilForge/aicoin-api.git
 
 Or just copy `aicoin_api.py` into your project.
 
-## Quick start
+## Usage
 
 ```python
 from aicoin_api import *
@@ -20,9 +20,11 @@ from aicoin_api import *
 for idx in global_index():
     print(idx['index_name'], idx['last'], idx['degree']+'%')
 
-# BTC technical signals
-tp_detail('btcusdt:binance')   # 24h OHLCV
-side_summary('btcusdt:binance') # signal_rate, net inflow, L/S ratio, liq
+# BTC 24h OHLCV
+tp_detail('btcusdt:binance')
+
+# Technical signals: signal_rate, net inflow, L/S ratio, liq
+side_summary('btcusdt:binance')
 
 # News / search / geo
 hot_news()
